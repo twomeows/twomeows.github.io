@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 170" width="150" height="170">
+  <!-- Рудий котик визирає зліва і махає лапкою -->
+  <g>
+    <!-- тіло, що ховається за краєм -->
+    <ellipse cx="30" cy="130" rx="52" ry="42" fill="#f6a04d"/>
+    <!-- голова -->
+    <circle cx="62" cy="72" r="40" fill="#f6a04d"/>
+    <!-- вушка -->
+    <path d="M30 48 L24 14 L52 34 Z" fill="#f6a04d"/>
+    <path d="M94 48 L100 14 L72 34 Z" fill="#f6a04d"/>
+    <path d="M32 42 L29 24 L45 35 Z" fill="#ffd9ae"/>
+    <path d="M92 42 L95 24 L79 35 Z" fill="#ffd9ae"/>
+    <!-- мордочка -->
+    <circle cx="48" cy="70" r="7" fill="#2d3a4d"/>
+    <circle cx="76" cy="70" r="7" fill="#2d3a4d"/>
+    <circle cx="50.5" cy="67.5" r="2.4" fill="#fff"/>
+    <circle cx="78.5" cy="67.5" r="2.4" fill="#fff"/>
+    <path d="M58 84 Q62 88 66 84" stroke="#2d3a4d" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M62 80 L62 84" stroke="#2d3a4d" stroke-width="2.6" stroke-linecap="round"/>
+    <ellipse cx="62" cy="79" rx="4.5" ry="3.5" fill="#e77b6a"/>
+    <!-- щічки -->
+    <circle cx="40" cy="82" r="6" fill="#ffc48f" opacity=".8"/>
+    <circle cx="84" cy="82" r="6" fill="#ffc48f" opacity=".8"/>
+    <!-- вусики -->
+    <path d="M34 74 L16 70 M34 80 L18 82" stroke="#2d3a4d" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M90 74 L108 70 M90 80 L106 82" stroke="#2d3a4d" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- лапка, що махає -->
+    <g>
+      <ellipse cx="118" cy="106" rx="13" ry="17" fill="#f6a04d" transform="rotate(-30 118 106)">
+        <animateTransform attributeName="transform" type="rotate" values="-30 118 122; 10 118 122; -30 118 122" dur="1.6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- смужки -->
+    <path d="M50 38 Q62 33 74 38" stroke="#e0862e" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

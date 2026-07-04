@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <!-- Двоє котиків разом — Two Meows! -->
+  <g>
+    <!-- рудий -->
+    <ellipse cx="78" cy="98" rx="44" ry="26" fill="#f6a04d"/>
+    <circle cx="78" cy="58" r="32" fill="#f6a04d"/>
+    <path d="M52 40 L48 14 L70 30 Z" fill="#f6a04d"/>
+    <path d="M104 40 L108 14 L86 30 Z" fill="#f6a04d"/>
+    <path d="M54 36 L51 22 L64 31 Z" fill="#ffd9ae"/>
+    <path d="M102 36 L105 22 L92 31 Z" fill="#ffd9ae"/>
+    <circle cx="67" cy="56" r="5.5" fill="#2d3a4d"/>
+    <circle cx="89" cy="56" r="5.5" fill="#2d3a4d"/>
+    <circle cx="69" cy="54" r="2" fill="#fff"/>
+    <circle cx="91" cy="54" r="2" fill="#fff"/>
+    <path d="M72 68 Q78 73 84 68" stroke="#2d3a4d" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="78" cy="65" rx="3.8" ry="3" fill="#e77b6a"/>
+    <circle cx="59" cy="66" r="5" fill="#ffc48f" opacity=".8"/>
+    <circle cx="97" cy="66" r="5" fill="#ffc48f" opacity=".8"/>
+    <!-- сірий -->
+    <ellipse cx="164" cy="100" rx="44" ry="24" fill="#9aa5b8"/>
+    <circle cx="164" cy="64" r="30" fill="#9aa5b8"/>
+    <path d="M140 48 L136 22 L158 38 Z" fill="#9aa5b8"/>
+    <path d="M188 48 L192 22 L170 38 Z" fill="#9aa5b8"/>
+    <path d="M142 44 L139 30 L152 39 Z" fill="#d9dfe8"/>
+    <path d="M186 44 L189 30 L176 39 Z" fill="#d9dfe8"/>
+    <circle cx="154" cy="62" r="5" fill="#2d3a4d"/>
+    <circle cx="174" cy="62" r="5" fill="#2d3a4d"/>
+    <circle cx="156" cy="60" r="1.8" fill="#fff"/>
+    <circle cx="176" cy="60" r="1.8" fill="#fff"/>
+    <path d="M159 73 Q164 77 169 73" stroke="#2d3a4d" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="164" cy="70" rx="3.5" ry="2.8" fill="#e77b6a"/>
+    <circle cx="147" cy="71" r="4.5" fill="#c3ccd9" opacity=".9"/>
+    <circle cx="181" cy="71" r="4.5" fill="#c3ccd9" opacity=".9"/>
+    <!-- хвостики-сердечко -->
+    <path d="M114 96 Q120 74 126 96" stroke="#e0862e" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- сердечко між ними -->
+    <path d="M120 40 C116 32 104 34 106 44 C107 50 116 56 120 58 C124 56 133 50 134 44 C136 34 124 32 120 40 Z" fill="#e77b6a">
+      <animate attributeName="opacity" values="1;.5;1" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

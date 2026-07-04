@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 170" width="150" height="170">
+  <!-- Рудий котик-педагог в окулярах, з олівцем -->
+  <g>
+    <ellipse cx="30" cy="130" rx="52" ry="42" fill="#f6a04d"/>
+    <circle cx="62" cy="72" r="40" fill="#f6a04d"/>
+    <path d="M30 48 L24 14 L52 34 Z" fill="#f6a04d"/>
+    <path d="M94 48 L100 14 L72 34 Z" fill="#f6a04d"/>
+    <path d="M32 42 L29 24 L45 35 Z" fill="#ffd9ae"/>
+    <path d="M92 42 L95 24 L79 35 Z" fill="#ffd9ae"/>
+    <!-- окуляри -->
+    <circle cx="48" cy="70" r="13" fill="rgba(255,255,255,.55)" stroke="#4b5b74" stroke-width="3.4"/>
+    <circle cx="78" cy="70" r="13" fill="rgba(255,255,255,.55)" stroke="#4b5b74" stroke-width="3.4"/>
+    <path d="M61 70 L65 70" stroke="#4b5b74" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M35 68 L26 64" stroke="#4b5b74" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="48" cy="70" r="5.5" fill="#2d3a4d"/>
+    <circle cx="78" cy="70" r="5.5" fill="#2d3a4d"/>
+    <circle cx="50" cy="68" r="2" fill="#fff"/>
+    <circle cx="80" cy="68" r="2" fill="#fff"/>
+    <path d="M58 88 Q63 92 68 88" stroke="#2d3a4d" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="63" cy="83" rx="4.5" ry="3.5" fill="#e77b6a"/>
+    <path d="M34 78 L16 74 M34 84 L18 86" stroke="#2d3a4d" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M92 78 L110 74 M92 84 L108 86" stroke="#2d3a4d" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- лапка з олівцем -->
+    <ellipse cx="104" cy="120" rx="13" ry="15" fill="#f6a04d"/>
+    <rect x="98" y="86" width="9" height="40" rx="4" fill="#f2c94c" transform="rotate(18 102 106)"/>
+    <path d="M112 84 L118 74 L120 87 Z" fill="#e77b6a" transform="rotate(18 116 80)"/>
+    <path d="M50 38 Q62 33 74 38" stroke="#e0862e" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

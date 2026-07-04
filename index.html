@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TwoMeows — двомовні аудіоказки для дітей 2–7 років</title>
+  <meta name="description" content="TwoMeows — інтерактивні аудіоказки, що допомагають дітям 2–7 років розвивати мовлення та вивчати другу мову. Кожна казка перевірена педагогом.">
+  <meta property="og:title" content="TwoMeows — казки, що вчать мови 🐱📚">
+  <meta property="og:description" content="Двомовні аудіоказки для дітей 2–7 років. Безпечний контент, перевірений педагогом.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══ Хмаринки на фоні ═══ -->
+  <div class="clouds" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+  </div>
+
+  <!-- ═══ Котики-маскоти (виглядають з боків при прокрутці) ═══ -->
+  <div class="cats-layer" aria-hidden="true">
+    <img class="cat cat-left"  data-cat="hero"     src="assets/cats/cat-peek-left.svg"   alt="">
+    <img class="cat cat-right" data-cat="how"      src="assets/cats/cat-point-right.svg" alt="">
+    <img class="cat cat-left"  data-cat="parents"  src="assets/cats/cat-glasses-left.svg" alt="">
+    <img class="cat cat-right" data-cat="library"  src="assets/cats/cat-books-right.svg" alt="">
+    <img class="cat cat-left"  data-cat="method"   src="assets/cats/cat-sleep-left.svg"  alt="">
+  </div>
+
+  <!-- ═══ Шапка ═══ -->
+  <header class="site-header">
+    <a class="logo" href="#hero">
+      <img src="assets/cats/logo-cat.svg" alt="" class="logo-icon">
+      <span class="logo-text">Two<em>Meows</em></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#how" data-i18n="nav.how">Як це працює</a>
+      <a href="#parents" data-i18n="nav.parents">Батькам</a>
+      <a href="#library" data-i18n="nav.library">Бібліотека</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Мова сайту">
+      <button data-lang="ua" class="active">УКР</button>
+      <button data-lang="sk">SK</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ 1. Hero ═══ -->
+    <section class="hero" id="hero" data-cat-section="hero">
+      <div class="hero-text reveal">
+        <span class="hero-badge" data-i18n="hero.badge">🐱 Для дітей від 2 до 7 років</span>
+        <h1 data-i18n-html="hero.title">Казки, що <span class="accent">вчать мови</span> 📚</h1>
+        <p class="hero-sub" data-i18n="hero.sub">TwoMeows — двомовні аудіоказки, з якими дитина слухає історію рідною мовою і непомітно для себе вивчає слова іншої. З картинками, озвучкою та чарівним підсвічуванням слів.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#start" data-i18n="hero.cta">🚀 Спробувати безкоштовно</a>
+          <span class="soon-badge" data-i18n="hero.soon">📱 Незабаром у Google Play</span>
+        </div>
+        <ul class="hero-points">
+          <li data-i18n="hero.point1">✅ Контент перевірено педагогом</li>
+          <li data-i18n="hero.point2">🚫 Без реклами</li>
+          <li data-i18n="hero.point3">🌙 Таймер сну</li>
+        </ul>
+      </div>
+
+      <!-- Мокап телефона з міні-читалкою -->
+      <div class="hero-phone reveal">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="app-header">
+              <span class="app-title">🧸 Лісові друзі</span>
+              <span class="app-chapter" data-i18n="phone.chapter">Розділ 2 із 5</span>
+            </div>
+            <img class="app-cover" src="assets/img/cover-forest-friends.webp" alt="Обкладинка казки Лісові друзі">
+            <p class="app-text">
+              Ведмедик побачив на галявині маленького
+              <span class="app-word">ježko <span class="app-word-hint">🦔 їжачок</span></span>
+              і радісно помахав йому лапкою.
+            </p>
+            <div class="app-progress"><div class="app-progress-fill"></div></div>
+            <div class="app-controls">
+              <span>⏪</span><span class="app-play">▶</span><span>⏩</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 2. Що це ═══ -->
+    <section class="section" id="about">
+      <div class="section-inner reveal">
+        <h2 data-i18n="about.title">Що таке TwoMeows? 🎧</h2>
+        <p class="section-lead" data-i18n="about.lead">Це бібліотека інтерактивних аудіоказок для найменших. Дитина слухає захопливу історію українською, а ключові слова звучать словацькою — з картинками, перекладом і чіткою вимовою. Так друга мова засвоюється природно, як рідна: через казку, гру та повторення.</p>
+        <div class="cards-3">
+          <div class="card">
+            <div class="card-emoji">🎙️</div>
+            <h3 data-i18n="about.c1t">Живе озвучення</h3>
+            <p data-i18n="about.c1d">Кожна казка озвучена виразно та тепло — як читає мама чи тато. Слова підсвічуються синхронно з голосом, наче караоке.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">🖼️</div>
+            <h3 data-i18n="about.c2t">Слова з картинками</h3>
+            <p data-i18n="about.c2d">Кожне нове слово має яскраву ілюстрацію, переклад і озвучку. Дитина бачить, чує і запам'ятовує.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">🧠</div>
+            <h3 data-i18n="about.c3t">Розвиток через гру</h3>
+            <p data-i18n="about.c3d">Мовлення, слух, увага, мислення та словниковий запас розвиваються самі собою — поки дитина просто слухає улюблену казку.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 3. Як це працює ═══ -->
+    <section class="section" id="how" data-cat-section="how">
+      <div class="section-inner reveal">
+        <h2 data-i18n="how.title">Як це працює? 🪄</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-emoji">📖</div>
+            <h3 data-i18n="how.s1t">Обери казку</h3>
+            <p data-i18n="how.s1d">Пригоди, тваринки, космос або казка на добраніч — під вік і настрій дитини.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-emoji">🎧</div>
+            <h3 data-i18n="how.s2t">Слухай і стеж</h3>
+            <p data-i18n="how.s2d">Текст підсвічується разом із голосом. Іноземні слова виділені кольором і звучать особливо чітко.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-emoji">🃏</div>
+            <h3 data-i18n="how.s3t">Вивчай слова</h3>
+            <p data-i18n="how.s3d">Після казки — маленьке повторення: слова з картинками, які дитина щойно почула в історії.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-emoji">⭐</div>
+            <h3 data-i18n="how.s4t">Збирай нагороди</h3>
+            <p data-i18n="how.s4d">Наліпки, рівні супергероя та скарбничка слів — щоб хотілося повертатися щодня.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 4. Для батьків ═══ -->
+    <section class="section" id="parents" data-cat-section="parents">
+      <div class="section-inner reveal">
+        <h2 data-i18n="parents.title">Створено з турботою про батьків 👨‍👩‍👧</h2>
+
+        <div class="pedagog-badge">
+          <div class="pedagog-icon">🎓</div>
+          <div>
+            <h3 data-i18n="parents.pedagogT">Кожна казка перевірена педагогом</h3>
+            <p data-i18n="parents.pedagogD">Жодна історія не потрапляє в застосунок без перевірки спеціаліста з раннього розвитку. Ми перевіряємо зміст, лексику, темп і відповідність віку — і публікуємо лише те, що справді корисне та безпечне для дитини.</p>
+          </div>
+        </div>
+
+        <div class="cards-3 parents-grid">
+          <div class="card">
+            <div class="card-emoji">🛡️</div>
+            <h3 data-i18n="parents.c1t">Безпечний простір</h3>
+            <p data-i18n="parents.c1d">Без реклами, без сторонніх посилань, без випадкового контенту. Тільки казки та навчання.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">🌙</div>
+            <h3 data-i18n="parents.c2t">Таймер сну</h3>
+            <p data-i18n="parents.c2d">Увімкніть казку на добраніч — застосунок сам тихенько вимкнеться, коли малюк засне.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">👧👦</div>
+            <h3 data-i18n="parents.c3t">Профілі для кожної дитини</h3>
+            <p data-i18n="parents.c3d">Кілька дітей — кілька профілів. У кожного свій прогрес, улюблені казки та нагороди.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">📈</div>
+            <h3 data-i18n="parents.c4t">Видимий прогрес</h3>
+            <p data-i18n="parents.c4d">Скільки казок прослухано, скільки слів вивчено — ви завжди бачите, як росте ваша дитина.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">🗣️</div>
+            <h3 data-i18n="parents.c5t">Розвиток мовлення</h3>
+            <p data-i18n="parents.c5d">Виразне озвучення та повторення збагачують словниковий запас і рідної, і другої мови.</p>
+          </div>
+          <div class="card">
+            <div class="card-emoji">⏱️</div>
+            <h3 data-i18n="parents.c6t">Розумний хронометраж</h3>
+            <p data-i18n="parents.c6d">Казки по 10–15 хвилин — достатньо для користі, не забагато для екранного часу.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 5. Для дітей ═══ -->
+    <section class="section section-kids" id="kids">
+      <div class="section-inner reveal">
+        <h2 data-i18n="kids.title">А для дітей це просто гра ⭐</h2>
+        <p class="section-lead" data-i18n="kids.lead">У TwoMeows працює «Школа супергероїв»: за кожну прослухану казку та вивчене слово дитина отримує нагороди.</p>
+        <div class="kids-features">
+          <div class="kids-item"><span>🦸</span><p data-i18n="kids.f1">Рівні сили супергероя — слухай казки та ставай сильнішим</p></div>
+          <div class="kids-item"><span>🏅</span><p data-i18n="kids.f2">Яскраві наліпки за досягнення</p></div>
+          <div class="kids-item"><span>💎</span><p data-i18n="kids.f3">Скарбничка слів — колекція всіх вивчених слів</p></div>
+          <div class="kids-item"><span>🎁</span><p data-i18n="kids.f4">Щоденний подарунок — маленька радість щодня</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 6. Бібліотека ═══ -->
+    <section class="section" id="library" data-cat-section="library">
+      <div class="section-inner reveal">
+        <h2 data-i18n="library.title">Бібліотека, що росте щотижня 📚</h2>
+        <p class="section-lead" data-i18n="library.lead">Нові казки з'являються постійно — від колискових для дворічних до пригод для майбутніх першокласників.</p>
+
+        <div class="books">
+          <div class="book">
+            <img class="book-cover" src="assets/img/cover-forest-friends.webp" alt="Обкладинка: Лісові друзі">
+            <h3 data-i18n="library.b1t">Лісові друзі</h3>
+            <p class="book-meta" data-i18n="library.b1m">🐻 Тваринки · 2–5 років</p>
+          </div>
+          <div class="book">
+            <div class="book-cover book-cover-css cover-emerald"><span>💎🗺️</span></div>
+            <h3 data-i18n="library.b2t">Таємниця Смарагдового Медальйона</h3>
+            <p class="book-meta" data-i18n="library.b2m">🧭 Пригоди · 4–8 років</p>
+          </div>
+          <div class="book">
+            <div class="book-cover book-cover-css cover-train"><span>🚂🌙</span></div>
+            <h3 data-i18n="library.b3t">Потяг Тиші та долина кольорових снів</h3>
+            <p class="book-meta" data-i18n="library.b3m">😴 На добраніч · 2–6 років</p>
+          </div>
+        </div>
+
+        <div class="genres">
+          <span class="chip" data-i18n="library.g1">🧭 Пригоди</span>
+          <span class="chip" data-i18n="library.g2">🐾 Тварини</span>
+          <span class="chip" data-i18n="library.g3">🌙 На добраніч</span>
+          <span class="chip" data-i18n="library.g4">🚀 Космос</span>
+          <span class="chip" data-i18n="library.g5">💛 Емоції та дружба</span>
+          <span class="chip" data-i18n="library.g6">🌦️ Погода та природа</span>
+          <span class="chip" data-i18n="library.g7">🚗 Транспорт</span>
+          <span class="chip" data-i18n="library.g8">🧍 Тіло людини</span>
+          <span class="chip" data-i18n="library.g9">🔍 Знайди та покажи</span>
+          <span class="chip" data-i18n="library.g10">📜 Віршики</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 7. Педагогічний підхід ═══ -->
+    <section class="section" id="method" data-cat-section="method">
+      <div class="section-inner reveal">
+        <h2 data-i18n="method.title">Чому це працює 🎓</h2>
+        <div class="method-grid">
+          <div class="method-item">
+            <h3 data-i18n="method.m1t">🧠 Найкращий вік для мов</h3>
+            <p data-i18n="method.m1d">У 2–7 років мозок дитини засвоює мови природно, без зубріння. Це «золоте вікно» раннього розвитку — і казки використовують його на повну.</p>
+          </div>
+          <div class="method-item">
+            <h3 data-i18n="method.m2t">👂👁️ Мультисенсорне навчання</h3>
+            <p data-i18n="method.m2d">Дитина одночасно чує слово, бачить картинку та стежить за підсвіченим текстом. Три канали сприйняття — утричі міцніше запам'ятовування.</p>
+          </div>
+          <div class="method-item">
+            <h3 data-i18n="method.m3t">🔁 Повторення без нудьги</h3>
+            <p data-i18n="method.m3d">Слова повертаються в різних казках і в режимі повторення після історії. Улюблену казку можна слухати знову і знову — і це теж навчання.</p>
+          </div>
+          <div class="method-item">
+            <h3 data-i18n="method.m4t">❤️ Емоційний зв'язок</h3>
+            <p data-i18n="method.m4d">Слова, почуті в улюбленій історії, запам'ятовуються краще, ніж будь-які картки. Емоція — найсильніший клей для пам'яті.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 8. Почни безкоштовно ═══ -->
+    <section class="section section-cta" id="start" data-cat-section="start">
+      <div class="section-inner reveal">
+        <div class="cta-box">
+          <div class="cta-cats" aria-hidden="true">
+            <img src="assets/cats/cat-duo.svg" alt="">
+          </div>
+          <h2 data-i18n="start.title">Почніть безкоштовно вже сьогодні 🎉</h2>
+          <p data-i18n="start.lead">Перші казки — безкоштовні, без картки та зобов'язань. Повна бібліотека з новими історіями щотижня — за підпискою.</p>
+          <a class="btn btn-primary btn-lg" href="#" data-i18n="start.cta">🐱 Завантажити TwoMeows</a>
+          <p class="cta-note" data-i18n="start.note">Застосунок незабаром з'явиться в Google Play</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 9. FAQ ═══ -->
+    <section class="section" id="faq">
+      <div class="section-inner section-narrow reveal">
+        <h2 data-i18n="faq.title">Часті питання 💬</h2>
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">З якого віку можна користуватись застосунком?</summary>
+          <p data-i18n="faq.a1">Від 2 років. Для найменших є короткі казки та колискові з простими словами, для дітей 5–7 років — довші пригоди з багатшою лексикою. Вік вказано на кожній казці.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">Хто перевіряє контент?</summary>
+          <p data-i18n="faq.a2">Кожна казка перед публікацією проходить перевірку педагога — спеціаліста з раннього розвитку. Перевіряється зміст, лексика, темп оповіді та відповідність заявленому віку.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">Які мови підтримуються?</summary>
+          <p data-i18n="faq.a3">Зараз казки звучать українською з вивченням словацьких слів. Ми працюємо над новими мовними парами — зокрема польською та англійською.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">Чи потрібен постійний інтернет?</summary>
+          <p data-i18n="faq.a4">Ні. Завантажену казку можна слухати без інтернету — в дорозі, на дачі чи в літаку.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">Що безкоштовно, а що за підпискою?</summary>
+          <p data-i18n="faq.a5">Перші казки повністю безкоштовні — можна спокійно спробувати. Підписка відкриває всю бібліотеку та нові історії, які з'являються щотижня.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">Чи безпечний застосунок для дитини?</summary>
+          <p data-i18n="faq.a6">Так. Жодної реклами, жодних сторонніх посилань і покупок, доступних дитині. Налаштування та підписка захищені батьківським доступом.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ 10. Footer ═══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Two<em>Meows</em></span>
+        <p data-i18n="footer.tag">Казки, що вчать мови 🐱🐱</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" data-i18n="footer.privacy">Політика конфіденційності</a>
+        <a href="mailto:hello@twomeows.app" data-i18n="footer.contact">Написати нам</a>
+      </div>
+      <p class="footer-copy">© 2026 TwoMeows</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

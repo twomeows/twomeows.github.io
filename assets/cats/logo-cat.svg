@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Логотип: мордочка котика -->
+  <circle cx="32" cy="34" r="24" fill="#f6a04d"/>
+  <path d="M13 22 L10 4 L27 15 Z" fill="#f6a04d"/>
+  <path d="M51 22 L54 4 L37 15 Z" fill="#f6a04d"/>
+  <path d="M15 19 L13 9 L23 15 Z" fill="#ffd9ae"/>
+  <path d="M49 19 L51 9 L41 15 Z" fill="#ffd9ae"/>
+  <circle cx="24" cy="32" r="4.2" fill="#2d3a4d"/>
+  <circle cx="40" cy="32" r="4.2" fill="#2d3a4d"/>
+  <circle cx="25.4" cy="30.6" r="1.5" fill="#fff"/>
+  <circle cx="41.4" cy="30.6" r="1.5" fill="#fff"/>
+  <path d="M27 42 Q32 46 37 42" stroke="#2d3a4d" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="32" cy="39" rx="3.2" ry="2.5" fill="#e77b6a"/>
+  <path d="M12 36 L2 34 M12 41 L3 44" stroke="#2d3a4d" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M52 36 L62 34 M52 41 L61 44" stroke="#2d3a4d" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
