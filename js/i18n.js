@@ -24,6 +24,11 @@
       const key = el.dataset.i18nHtml;
       if (dict[key] != null) el.innerHTML = dict[key];
     });
+    // alt у обкладинок книг — той самий ключ, що й заголовок
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.dataset.i18nAlt;
+      if (dict[key] != null) el.alt = dict[key];
+    });
     if (dict["meta.title"]) document.title = dict["meta.title"];
   }
 

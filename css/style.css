@@ -376,10 +376,10 @@ h3 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
 .kids-item p { font-weight: 700; font-size: 15px; color: var(--ink); }
 
 /* ═══ Бібліотека ═══ */
-.books { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; margin-bottom: 34px; }
 .book { text-align: center; }
 .book-cover {
   width: 100%;
+  height: auto;        /* без цього атрибути width/height у <img> задають height і вбивають aspect-ratio */
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 20px;
@@ -387,11 +387,59 @@ h3 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
   transition: transform .2s ease;
 }
 .book:hover .book-cover { transform: translateY(-5px) rotate(-1deg); }
-.book-cover-css { display: flex; align-items: center; justify-content: center; font-size: 64px; }
-.cover-emerald { background: linear-gradient(140deg, #2e7d5b, #71c39b); }
-.cover-train   { background: linear-gradient(140deg, #3b4a8c, #8f9fdd); }
 .book h3 { font-size: 16px; margin-top: 14px; }
 .book-meta { font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+
+/* Полиця, що їде сама.
+   .shelf-track містить два однакових набори, тому зсув на -50% ширини треку
+   дорівнює рівно одному набору — шва не видно. Анімація тільки на transform:
+   не смикає лейаут і не потребує JS (rAF у фонових вкладках не працює). */
+.shelf {
+  --shelf-card: 200px;
+  --shelf-gap: 26px;
+  --shelf-speed: 120s;
+  /* виходимо за падінги секції, але НЕ через 100vw: там ширина зі смугою
+     прокрутки, і сторінка отримує зайві ~8px по горизонталі */
+  margin-inline: calc(clamp(20px, 6vw, 72px) * -1);
+  margin-bottom: 34px;
+  padding-block: 10px;             /* щоб підйом обкладинки на hover не зрізало */
+  overflow: hidden;
+  /* широке затухання по краях: котик-книгочей стоїть фіксовано біля правого
+     краю, і полиця однаково проїде під ним — хай проїжджає вже майже прозорою */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+}
+.shelf-track {
+  display: flex;
+  width: max-content;
+  animation: shelf-scroll var(--shelf-speed) linear infinite;
+}
+.shelf:hover .shelf-track,
+.shelf:focus-within .shelf-track { animation-play-state: paused; }
+.shelf-set { display: flex; gap: var(--shelf-gap); padding-right: var(--shelf-gap); }
+.shelf .book { flex: 0 0 var(--shelf-card); width: var(--shelf-card); }
+.shelf .book-cover { display: block; }
+/* назви різної довжини — обрізаємо до двох рядків, інакше ряд «стрибає» */
+.shelf .book h3 {
+  font-size: 15px;
+  margin-top: 12px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.shelf figcaption { min-height: 70px; }   /* рівний низ і для одно-, і для дворядкових назв */
+@keyframes shelf-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+@media (max-width: 600px) { .shelf { --shelf-card: 148px; --shelf-gap: 16px; } }
+@media (prefers-reduced-motion: reduce) {
+  .shelf { overflow-x: auto; }
+  .shelf-track { animation: none; }
+  .shelf-set + .shelf-set { display: none; }   /* клон непотрібен без руху */
+}
 
 .genres { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .chip {
