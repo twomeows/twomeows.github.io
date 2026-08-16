@@ -2,7 +2,7 @@
 
 Промо-лендинг застосунку **TwoMeows** — двомовні аудіоказки для дітей 2–7 років.
 
-**Live:** https://vladyslav2525.github.io/twomeows-site/
+**Live:** https://twomeows.github.io/
 
 ## Стек
 
@@ -16,13 +16,15 @@ python -m http.server 8080
 
 ```
 index.html        — лендинг
-privacy.html      — політика конфіденційності (заглушка)
+privacy.html      — політика конфіденційності
+404.html          — сторінка «не знайдено» (шляхи абсолютні, від кореня)
 css/style.css     — стилі (палітра в CSS-змінних угорі файлу)
 js/main.js        — скрол-анімації котиків та секцій
 js/i18n.js        — перемикач мов
 lang/*.json       — тексти UA / SK / EN
 assets/cats/      — котики-маскоти (SVG)
-assets/img/       — обкладинки книг
+assets/img/       — обкладинки книг + og-cover.jpg (прев'ю для месенджерів)
+pictures/         — оригінали малюнків котиків (не використовуються сайтом)
 ```
 
 ## Котики 🎨
@@ -49,7 +51,10 @@ assets/img/       — обкладинки книг
 
 ## Деплой
 
-Сайт хоститься на GitHub Pages з гілки `main` (корінь). Просто запуш зміни:
+Сайт хоститься на GitHub Pages (репо `twomeows/twomeows.github.io`, гілка `main`, корінь).
+Pages тут «легаси»-збірка — хвилини GitHub Actions вона **не** витрачає.
+Пуш іде від активного акаунта `gh`, тому спершу: `gh auth switch --user twomeoows-cell`
+(мітка стара, за нею акаунт `twomeows`). Далі просто запуш зміни:
 
 ```
 git add -A && git commit -m "update site" && git push
