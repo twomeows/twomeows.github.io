@@ -45,8 +45,8 @@
 
     /* Кроки. Номер винесено в лівий стовпчик, щоб на телефоні крок читався
        як картка, а не як суцільний абзац із цифрою на початку рядка. */
-    .steps { list-style: none; padding: 0; margin: 18px 0 0; counter-reset: step; }
-    .step {
+    .join-steps { list-style: none; padding: 0; margin: 18px 0 0; counter-reset: step; }
+    .join-step {
       display: grid;
       grid-template-columns: 44px 1fr;
       gap: 14px;
@@ -57,7 +57,7 @@
       border-radius: 18px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
     }
-    .step::before {
+    .join-step::before {
       counter-increment: step;
       content: counter(step);
       display: flex;
@@ -71,9 +71,9 @@
       font-weight: 900;
       font-size: 19px;
     }
-    .step h3 { margin: 4px 0 6px; font-size: 18px; text-align: left; }
-    .step p { margin: 0 0 10px; }
-    .step .btn { margin-top: 4px; }
+    .join-step h3 { margin: 4px 0 6px; font-size: 18px; text-align: left; }
+    .join-step p { margin: 0 0 10px; }
+    .join-step .btn { margin-top: 4px; }
 
     /* Попередження про 14 днів — головне на сторінці: якщо застосунок
        видалять раніше, людина не зараховується Google взагалі. */
@@ -108,8 +108,8 @@
     Google Play <strong>саме на цьому телефоні</strong>. Уся процедура — три
     кроки і близько п'яти хвилин.</p>
 
-    <ol class="steps">
-      <li class="step">
+    <ol class="join-steps">
+      <li class="join-step">
         <div>
           <h3>Вступіть у групу тестувальників</h3>
           <p>Натисніть кнопку і на сторінці групи оберіть «Приєднатися». Робіть
@@ -117,7 +117,7 @@
           <a class="btn btn-primary" href="https://groups.google.com/g/twomeows-testers" target="_blank" rel="noopener">Приєднатися до групи</a>
         </div>
       </li>
-      <li class="step">
+      <li class="join-step">
         <div>
           <h3>Відкрийте посилання тестування</h3>
           <p>На сторінці натисніть «Стати тестувальником». Якщо там написано,
@@ -127,7 +127,7 @@
           <a class="btn btn-primary" href="https://play.google.com/apps/testing/two.meows" target="_blank" rel="noopener">Стати тестувальником</a>
         </div>
       </li>
-      <li class="step">
+      <li class="join-step">
         <div>
           <h3>Встановіть застосунок</h3>
           <p>На тій самій сторінці з'явиться посилання «Завантажити з Google
