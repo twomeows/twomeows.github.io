@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  Сторінка набору тестувальників закритого тестування Google Play.
+
+  ДВА ПОСИЛАННЯ, ЯКІ ТРЕБА ТРИМАТИ АКТУАЛЬНИМИ:
+
+  1. GROUP_URL — https://groups.google.com/g/twomeows-testers
+     Google Група, на яку налаштований трек закритого тестування. Якщо групу
+     назвали інакше — замінити адресу в кроці 1 нижче.
+
+  2. OPT_IN_URL — https://play.google.com/apps/testing/two.meows
+     Посилання опт-іну. Береться з Play Console: Тестування → Закрите
+     тестування → Кількість тестувальників → блок «На сайті» → «Копіювати
+     посилання». Копіювати саме звідти, а не збирати руками.
+
+  Посилання опт-іну працює ТІЛЬКИ для тих, хто вже в групі. Тому порядок
+  кроків на сторінці змінювати не можна: спершу група, потім опт-ін.
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стати тестувальником — TwoMeows</title>
+  <meta name="description" content="Як приєднатися до закритого тестування TwoMeows: вступити в групу тестувальників, відкрити посилання Google Play і встановити застосунок.">
+  <meta name="theme-color" content="#a9d3e9">
+  <link rel="canonical" href="https://twomeows.github.io/testing.html">
+  <meta property="og:title" content="Стати тестувальником — TwoMeows">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://twomeows.github.io/testing.html">
+  <meta property="og:site_name" content="TwoMeows">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .testing { max-width: 760px; margin: 0 auto; padding: calc(var(--header-h) + 40px) 24px 80px; }
+    .testing h1 { font-size: 32px; margin-bottom: 8px; }
+    .testing h2 { font-size: 22px; text-align: left; margin: 34px 0 10px; }
+    .testing p, .testing li { color: var(--ink-soft); font-weight: 600; }
+    .testing ul { padding-left: 22px; }
+    .testing li { margin-bottom: 6px; }
+
+    /* Кроки. Номер винесено в лівий стовпчик, щоб на телефоні крок читався
+       як картка, а не як суцільний абзац із цифрою на початку рядка. */
+    .steps { list-style: none; padding: 0; margin: 18px 0 0; counter-reset: step; }
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px 18px 18px 14px;
+      margin-bottom: 14px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent, #a9d3e9);
+      color: #123;
+      font-weight: 900;
+      font-size: 19px;
+    }
+    .step h3 { margin: 4px 0 6px; font-size: 18px; text-align: left; }
+    .step p { margin: 0 0 10px; }
+    .step .btn { margin-top: 4px; }
+
+    /* Попередження про 14 днів — головне на сторінці: якщо застосунок
+       видалять раніше, людина не зараховується Google взагалі. */
+    .warn {
+      margin: 26px 0 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #fff4d6;
+      border: 2px solid #f2c94c;
+    }
+    .warn p { margin: 0; color: #6b4e00; }
+    .warn p + p { margin-top: 8px; }
+
+    .faq-q { font-weight: 800; margin: 18px 0 4px; }
+    .faq-a { margin: 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/cats/meows_logo.svg" alt="" class="logo-icon">
+      <span class="logo-text">Two<em>Meows</em></span>
+    </a>
+  </header>
+
+  <main class="testing">
+    <h1>Стати тестувальником 🧪</h1>
+    <p>TwoMeows зараз на закритому тестуванні в Google Play. Це означає, що
+    застосунок уже працює, але встановити його можуть лише люди зі списку
+    тестувальників. Приєднатися може будь-хто — дитини мати не обов'язково.</p>
+    <p>Знадобиться телефон на Android і пошта Google, під якою ви заходите в
+    Google Play <strong>саме на цьому телефоні</strong>. Уся процедура — три
+    кроки і близько п'яти хвилин.</p>
+
+    <ol class="steps">
+      <li class="step">
+        <div>
+          <h3>Вступіть у групу тестувальників</h3>
+          <p>Натисніть кнопку і на сторінці групи оберіть «Приєднатися». Робіть
+          це з того облікового запису Google, який стоїть на телефоні.</p>
+          <a class="btn btn-primary" href="https://groups.google.com/g/twomeows-testers" target="_blank" rel="noopener">Приєднатися до групи</a>
+        </div>
+      </li>
+      <li class="step">
+        <div>
+          <h3>Відкрийте посилання тестування</h3>
+          <p>На сторінці натисніть «Стати тестувальником». Якщо там написано,
+          що ви не є тестувальником, — ви ще не в групі або зайшли з іншої
+          пошти. Буває й затримка: після вступу в групу Google Play інколи
+          бачить вас не одразу, тоді спробуйте за годину.</p>
+          <a class="btn btn-primary" href="https://play.google.com/apps/testing/two.meows" target="_blank" rel="noopener">Стати тестувальником</a>
+        </div>
+      </li>
+      <li class="step">
+        <div>
+          <h3>Встановіть застосунок</h3>
+          <p>На тій самій сторінці з'явиться посилання «Завантажити з Google
+          Play». Відкрийте його з телефона, встановіть TwoMeows і послухайте
+          одну казку — цього достатньо.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="warn">
+      <p><strong>⚠️ Головне прохання: не видаляйте застосунок 14 днів.</strong></p>
+      <p>Google рахує лише тих тестувальників, які встановили застосунок і
+      залишалися в програмі безперервно два тижні. Якщо видалити раніше або
+      вийти з групи — людина не зараховується взагалі, і відлік для всіх
+      починається спочатку. Просто хай стоїть на телефоні.</p>
+    </div>
+
+    <h2>Що корисно перевірити</h2>
+    <ul>
+      <li>Чи впорається дитина з плеєром сама — пауза, наступна казка.</li>
+      <li>Чи зрозуміло, що таке гра-повторення після казки і навіщо вона.</li>
+      <li>Скільки дитина слухала, перш ніж відволіклася.</li>
+      <li>Що дратувало або було незрозуміло дорослому.</li>
+    </ul>
+    <p>Напишіть враження на <a href="mailto:twomeoows@gmail.com">twomeoows@gmail.com</a> —
+    навіть два речення допомагають більше, ніж здається.</p>
+
+    <h2>Часті питання</h2>
+
+    <p class="faq-q">Чи потрібно платити?</p>
+    <p class="faq-a">Ні. Перші казки безкоштовні, а тестування нічого не коштує.</p>
+
+    <p class="faq-q">У мене iPhone. Можна?</p>
+    <p class="faq-a">Поки ні — тестування йде тільки для Android.</p>
+
+    <p class="faq-q">Не бачу застосунок у Google Play після вступу в групу.</p>
+    <p class="faq-a">Це нормально в перші години: доступ доїжджає не миттєво.
+    Перевірте також, що на телефоні активна саме та пошта, з якої ви вступали
+    в групу.</p>
+
+    <p class="faq-q">Я без дітей. Мене зарахують?</p>
+    <p class="faq-a">Так. Google рахує облікові записи, а не батьківство.</p>
+
+    <p class="faq-q">Що буде з моїми даними?</p>
+    <p class="faq-a">Те саме, що й у звичайних користувачів — див.
+    <a href="privacy.html">політику конфіденційності</a>. Реклами в застосунку
+    немає, ім'я дитини не залишає пристрій.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 TwoMeows</p>
+    </div>
+  </footer>
+</body>
+</html>
