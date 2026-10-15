@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark's Garage — Trucks for Kids</title>
+  <meta name="description" content="Mark's Garage: build a truck, fill it up, do the job and wash it! A gentle game for children aged 2–5. No ads, works offline, 16 languages.">
+  <meta name="theme-color" content="#6fd2ff">
+  <link rel="canonical" href="https://twomeows.github.io/marksgarage/">
+  <meta property="og:title" content="Mark's Garage — Trucks for Kids">
+  <meta property="og:description" content="Build a truck, fill it up, do the job and wash it! For ages 2–5. No ads, works offline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://twomeows.github.io/marksgarage/">
+  <meta property="og:image" content="https://twomeows.github.io/marksgarage/shots/01_menu.jpg">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* The game's own palette: the menu's sky and grass, the world cards' orange plate. */
+    :root {
+      --sky-top: #6fd2ff; --sky-low: #bfe6fa;
+      --grass: #77c94a; --grass-dark: #5fae38;
+      --plate: #f07a1a; --plate-dark: #c85f0c;
+      --ink: #26313a; --ink-soft: #4a5560; --card: #fffdf7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); line-height: 1.6;
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-low) 520px, #e8f6fd 1100px);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 0; }
+    .top { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+    .top button {
+      font: inherit; font-weight: 800; cursor: pointer; color: var(--ink);
+      background: #fff; border: 3px solid var(--ink); border-radius: 999px;
+      padding: 4px 14px; box-shadow: 0 3px 0 rgba(0,0,0,.15);
+    }
+    .top button[aria-pressed="true"] { background: var(--plate); color: #fff; }
+    .hero { text-align: center; padding: 18px 0 8px; }
+    .hero img.icon {
+      width: 132px; height: 132px; border-radius: 32px; background: #fff;
+      box-shadow: 0 8px 0 rgba(0,0,0,.12), 0 14px 30px rgba(0,60,100,.18);
+    }
+    .plate {
+      display: inline-block; margin-top: 18px; background: var(--plate); color: #fff;
+      font-weight: 900; font-size: clamp(26px, 6vw, 40px); letter-spacing: .01em;
+      padding: 10px 30px; border-radius: 20px; border: 3px solid var(--ink);
+      box-shadow: 0 5px 0 var(--plate-dark); transform: rotate(-1.5deg);
+    }
+    .tagline { font-size: clamp(18px, 3.4vw, 22px); font-weight: 900; color: #1d4e66; margin: 18px auto 6px; max-width: 640px; }
+    .for { font-weight: 800; color: #1d4e66; margin: 0 0 18px; }
+    .play {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+      background: var(--ink); color: #fff; font-weight: 900; font-size: 18px;
+      padding: 12px 26px; border-radius: 16px; box-shadow: 0 5px 0 rgba(0,0,0,.25);
+    }
+    .play svg { width: 22px; height: 22px; }
+    .shots {
+      display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 26px 4px 18px; margin: 0 -4px;
+    }
+    .shots img {
+      flex: 0 0 auto; width: min(78vw, 440px); aspect-ratio: 16 / 9; height: auto;
+      border-radius: 18px; border: 3px solid var(--ink); scroll-snap-align: center;
+      box-shadow: 0 6px 0 rgba(0,0,0,.10); background: #fff;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 10px 0 0; }
+    .card {
+      background: var(--card); border: 3px solid var(--ink); border-radius: 22px;
+      padding: 18px 20px 12px; box-shadow: 0 6px 0 rgba(0,0,0,.10);
+    }
+    .card h3 { margin: 0 0 4px; font-size: 19px; font-weight: 900; }
+    .card p { margin: 4px 0 8px; color: var(--ink-soft); font-weight: 600; }
+    .card .em { font-size: 28px; line-height: 1; }
+    .steps { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .steps li {
+      background: #fff; border: 3px solid var(--ink); border-radius: 999px; padding: 6px 16px;
+      font-weight: 900; box-shadow: 0 3px 0 rgba(0,0,0,.12);
+    }
+    .soon {
+      margin: 26px 0 0; text-align: center; background: var(--plate); color: #fff;
+      border: 3px solid var(--ink); border-radius: 22px; padding: 16px 20px; font-weight: 900;
+      box-shadow: 0 6px 0 var(--plate-dark);
+    }
+    .soon p { margin: 4px 0; }
+    footer {
+      margin-top: 48px; padding: 40px 16px 28px; text-align: center; color: #fff; font-weight: 800;
+      background: linear-gradient(180deg, var(--grass) 0%, var(--grass-dark) 100%); border-top: 4px solid #4f9a2c;
+    }
+    footer a { color: #fff; }
+    footer p { margin: 6px 0; }
+    /* One language at a time; English without JavaScript. */
+    body.en [data-l]:not([data-l="en"]),
+    body.ru [data-l]:not([data-l="ru"]),
+    body.uk [data-l]:not([data-l="uk"]) { display: none !important; }
+  </style>
+</head>
+<body class="en">
+  <div class="wrap">
+    <nav class="top" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="ru" aria-pressed="false">Русский</button>
+      <button type="button" data-set="uk" aria-pressed="false">Українська</button>
+    </nav>
+
+    <header class="hero">
+      <img class="icon" src="icon.png" alt="">
+      <div><span class="plate" data-l="en">Mark's Garage</span><span class="plate" data-l="ru">Гараж Марка</span><span class="plate" data-l="uk">Гараж Марка</span></div>
+      <p class="tagline" data-l="en">Build a truck, fill it up, do the job and wash it — Mark the cat needs a helper!</p>
+      <p class="tagline" data-l="ru">Собери машину, заправь, поработай и помой — коту Марку нужен помощник!</p>
+      <p class="tagline" data-l="uk">Збери машину, заправ, попрацюй і помий — котові Маркові потрібен помічник!</p>
+      <p class="for" data-l="en">For children aged 2–5 · No ads · Works offline · 16 languages</p>
+      <p class="for" data-l="ru">Для детей 2–5 лет · Без рекламы · Без интернета · 16 языков</p>
+      <p class="for" data-l="uk">Для дітей 2–5 років · Без реклами · Без інтернету · 16 мов</p>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.marksgarage.app">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M4 2.5v19l10-9.5L4 2.5zm11.2 10.6 2.7 2.6-11 6.2 8.3-8.8zm0-2.2L6.9 2.1l11 6.2-2.7 2.6zm3.9 1.1-2.7 2.6-2.4-2.6 2.4-2.6 2.7 2.6z"/></svg>
+        Google Play
+      </a>
+    </header>
+
+    <div class="shots" aria-label="Screenshots">
+      <img src="shots/01_menu.jpg" alt="Menu" loading="lazy">
+      <img src="shots/02_assembly.jpg" alt="Assembly" loading="lazy">
+      <img src="shots/03_refuel.jpg" alt="Refuelling" loading="lazy">
+      <img src="shots/04_dig.jpg" alt="Digging" loading="lazy">
+      <img src="shots/05_crane.jpg" alt="Crane" loading="lazy">
+      <img src="shots/06_dump.jpg" alt="Dump truck" loading="lazy">
+      <img src="shots/07_wash.jpg" alt="Wash" loading="lazy">
+      <img src="shots/08_garage.jpg" alt="Garage" loading="lazy">
+    </div>
+
+    <ul class="steps" data-l="en"><li>🔧 Build</li><li>⛽ Fill up</li><li>🚧 Three jobs</li><li>🫧 Wash</li><li>🏠 Garage</li></ul>
+    <ul class="steps" data-l="ru"><li>🔧 Собрать</li><li>⛽ Заправить</li><li>🚧 Три работы</li><li>🫧 Помыть</li><li>🏠 В гараж</li></ul>
+    <ul class="steps" data-l="uk"><li>🔧 Зібрати</li><li>⛽ Заправити</li><li>🚧 Три роботи</li><li>🫧 Помити</li><li>🏠 У гараж</li></ul>
+
+    <section class="grid" data-l="en">
+      <div class="card"><div class="em">🚜</div><h3>20 construction machines</h3><p>Mixer, excavator, bulldozer, crane, road roller, tower crane and more — each does its own real job.</p></div>
+      <div class="card"><div class="em">🎬</div><h3>Films and gifts</h3><p>On special levels a short film shows the real big machine, and a gift goes to Mark's workshop.</p></div>
+      <div class="card"><div class="em">🌈</div><h3>Nothing can go wrong</h3><p>No losing, no timers, no "wrong". Big parts and simple gestures made for little fingers.</p></div>
+      <div class="card"><div class="em">🗣️</div><h3>Speaks 16 languages</h3><p>Mark's warm voice gives a hint when a child is unsure. The game picks the phone's language itself.</p></div>
+      <div class="card"><div class="em">🛡️</div><h3>Calm for parents</h3><p>No ads, no internet needed, no data collected. Settings sit behind a parental gate.</p></div>
+    </section>
+    <section class="grid" data-l="ru">
+      <div class="card"><div class="em">🚜</div><h3>20 строительных машин</h3><p>Бетономешалка, экскаватор, бульдозер, автокран, каток, башенный кран и другие — у каждой своя настоящая работа.</p></div>
+      <div class="card"><div class="em">🎬</div><h3>Фильмы и подарки</h3><p>На особых уровнях — короткий фильм о настоящей большой машине и подарок в мастерскую Марка.</p></div>
+      <div class="card"><div class="em">🌈</div><h3>Здесь всё получится</h3><p>Нет проигрышей, таймеров и «неправильно». Крупные детали и простые жесты для маленьких пальчиков.</p></div>
+      <div class="card"><div class="em">🗣️</div><h3>Говорит на 16 языках</h3><p>Тёплый голос Марка подсказывает, если ребёнок задумался. Язык игра выбирает сама — по телефону.</p></div>
+      <div class="card"><div class="em">🛡️</div><h3>Спокойно для родителей</h3><p>Без рекламы, без интернета, никаких данных. Настройки — за родительским замком.</p></div>
+    </section>
+    <section class="grid" data-l="uk">
+      <div class="card"><div class="em">🚜</div><h3>20 будівельних машин</h3><p>Бетонозмішувач, екскаватор, бульдозер, автокран, коток, баштовий кран та інші — у кожної своя справжня робота.</p></div>
+      <div class="card"><div class="em">🎬</div><h3>Фільми й подарунки</h3><p>На особливих рівнях — коротке відео про справжню велику машину й подарунок до майстерні Марка.</p></div>
+      <div class="card"><div class="em">🌈</div><h3>Тут усе вийде</h3><p>Немає програшів, таймерів і «неправильно». Великі деталі й прості жести для маленьких пальчиків.</p></div>
+      <div class="card"><div class="em">🗣️</div><h3>Розмовляє 16 мовами</h3><p>Теплий голос Марка підказує, якщо дитина замислилася. Мову гра обирає сама — за телефоном.</p></div>
+      <div class="card"><div class="em">🛡️</div><h3>Спокійно для батьків</h3><p>Без реклами, без інтернету, жодних даних. Налаштування — за батьківським замком.</p></div>
+    </section>
+
+    <div class="soon" data-l="en"><p>Coming soon: City Helpers · Farm Machines · Airport · Railway · Seaport</p><p>a hundred more vehicles!</p></div>
+    <div class="soon" data-l="ru"><p>Скоро: Городские помощники · Ферма · Аэропорт · Железная дорога · Морской порт</p><p>ещё сто машин!</p></div>
+    <div class="soon" data-l="uk"><p>Незабаром: Міські помічники · Ферма · Аеропорт · Залізниця · Морський порт</p><p>ще сто машин!</p></div>
+  </div>
+
+  <footer>
+    <p><a href="privacy.html" data-l="en">Privacy policy</a><a href="privacy.html#ru" data-l="ru">Политика конфиденциальности</a><a href="privacy.html#uk" data-l="uk">Політика конфіденційності</a></p>
+    <p><a href="mailto:octo.technology.dev@gmail.com">octo.technology.dev@gmail.com</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('mg-lang'); } catch (e) {}
+      var nav = (navigator.language || 'en').slice(0, 2);
+      var pick = saved || (nav === 'ru' ? 'ru' : (nav === 'uk' ? 'uk' : 'en'));
+      function set(l) {
+        document.body.className = l;
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-set]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-set') === l ? 'true' : 'false');
+        });
+        try { localStorage.setItem('mg-lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('[data-set]').forEach(function (b) {
+        b.addEventListener('click', function () { set(b.getAttribute('data-set')); });
+      });
+      set(pick);
+    })();
+  </script>
+</body>
+</html>
