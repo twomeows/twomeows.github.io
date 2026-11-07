@@ -16,7 +16,8 @@ python -m http.server 8080
 
 ```
 index.html        — лендинг
-privacy.html      — політика конфіденційності
+privacy.html      — політика конфіденційності (Android, Google Play)
+privacy-ios.html  — політика конфіденційності iOS-версії (App Store), EN / UA / SK
 404.html          — сторінка «не знайдено» (шляхи абсолютні, від кореня)
 css/style.css     — стилі (палітра в CSS-змінних угорі файлу)
 js/main.js        — скрол-анімації котиків та секцій
