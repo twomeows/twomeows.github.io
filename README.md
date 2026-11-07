@@ -78,3 +78,17 @@ git add -A && git commit -m "update site" && git push
 ```
 
 Через ~хвилину зміни з'являться на сайті.
+
+## Адреси політик конфіденційності для магазинів
+
+Ці URL вписані (або будуть вписані) в Google Play Console і App Store Connect —
+**не перейменовувати й не переносити файли**, інакше посилання в магазинах зламаються.
+
+| застосунок | Google Play (Android) | App Store (iOS) |
+|---|---|---|
+| TwoMeows | https://twomeows.github.io/privacy.html | https://twomeows.github.io/privacy-ios.html |
+| Mark the Cat | https://twomeows.github.io/markthecat/privacy.html | https://twomeows.github.io/markthecat/privacy-ios.html |
+| Mark's Garage | https://twomeows.github.io/marksgarage/privacy.html | https://twomeows.github.io/marksgarage/privacy-ios.html |
+
+Розділ про видалення акаунта TwoMeows: `privacy.html#delete` (Android),
+`privacy-ios.html#delete-en` / `#delete-uk` / `#delete-sk` (iOS).
