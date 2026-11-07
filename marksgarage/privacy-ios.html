@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark's Garage for iPhone and iPad — Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Mark's Garage for iPhone and iPad, a game for children aged 2–5: it collects no data at all.">
+  <meta name="theme-color" content="#6fd2ff">
+  <link rel="canonical" href="https://twomeows.github.io/marksgarage/privacy-ios.html">
+  <meta property="og:title" content="Mark's Garage for iPhone and iPad — Privacy Policy">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://twomeows.github.io/marksgarage/privacy-ios.html">
+  <meta property="og:image" content="https://twomeows.github.io/marksgarage/icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* The game's own palette: the menu's sky and grass, the world cards' orange plate. */
+    :root {
+      --sky-top: #6fd2ff;
+      --sky-low: #bfe6fa;
+      --grass: #77c94a;
+      --grass-dark: #5fae38;
+      --plate: #f07a1a;
+      --plate-dark: #c85f0c;
+      --ink: #26313a;
+      --ink-soft: #4a5560;
+      --card: #fffdf7;
+      --line: rgba(38, 49, 58, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-low) 420px, #e8f6fd 900px);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 32px 16px 0; }
+    .hero { text-align: center; padding: 8px 0 26px; }
+    .hero img {
+      width: 112px; height: 112px; border-radius: 28px;
+      box-shadow: 0 8px 0 rgba(0,0,0,.12), 0 14px 30px rgba(0,60,100,.18);
+      background: #fff;
+    }
+    .plate {
+      display: inline-block; margin-top: 18px;
+      background: var(--plate); color: #fff;
+      font-weight: 900; font-size: clamp(22px, 5vw, 30px); letter-spacing: .02em;
+      padding: 10px 28px; border-radius: 18px;
+      border: 3px solid var(--ink);
+      box-shadow: 0 5px 0 var(--plate-dark);
+      transform: rotate(-1.5deg);
+    }
+    .platform {
+      display: inline-block; margin-top: 16px;
+      background: #fff; color: var(--ink); font-weight: 900; font-size: 15px;
+      border: 3px solid var(--ink); border-radius: 999px;
+      padding: 2px 16px; box-shadow: 0 4px 0 rgba(0,0,0,.15);
+    }
+    .hero .sub { margin: 14px 0 0; font-weight: 800; color: #1d4e66; }
+    nav.langs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 22px 0 6px; }
+    nav.langs a {
+      text-decoration: none; color: var(--ink); font-weight: 800;
+      background: #fff; border: 3px solid var(--ink); border-radius: 999px;
+      padding: 6px 18px; box-shadow: 0 4px 0 rgba(0,0,0,.15);
+    }
+    nav.langs a:hover { background: #fff3e6; }
+    .card {
+      background: var(--card); border: 3px solid var(--ink); border-radius: 26px;
+      padding: 26px 24px 18px; margin: 26px 0;
+      box-shadow: 0 8px 0 rgba(0,0,0,.10);
+      scroll-margin-top: 16px;
+    }
+    .card h2 {
+      margin: 0 0 6px; font-size: 26px; font-weight: 900;
+    }
+    .card h3 { margin: 22px 0 4px; font-size: 18px; font-weight: 900; color: var(--plate-dark); }
+    .card p { margin: 6px 0 10px; color: var(--ink-soft); font-weight: 600; }
+    .card .lead { font-weight: 700; color: var(--ink); }
+    .none {
+      display: inline-block; background: var(--grass); color: #fff; font-weight: 900;
+      border-radius: 10px; padding: 0 10px; margin-right: 4px;
+    }
+    .updated { color: #1d4e66; font-weight: 800; text-align: center; margin: 4px 0 0; }
+    a { color: var(--plate-dark); font-weight: 800; }
+    footer {
+      margin-top: 40px; padding: 40px 16px 28px; text-align: center;
+      background: linear-gradient(180deg, var(--grass) 0%, var(--grass-dark) 100%);
+      color: #fff; font-weight: 800;
+      border-top: 4px solid #4f9a2c;
+    }
+    footer a { color: #fff; }
+    footer p { margin: 6px 0; }
+    @media (max-width: 520px) {
+      .card { padding: 20px 16px 12px; border-radius: 20px; }
+      .card h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <img src="icon.png" alt="Mark's Garage">
+      <div><span class="plate">Mark's Garage</span></div>
+      <div><span class="platform">iPhone · iPad</span></div>
+      <p class="sub">Гараж Марка · a game for children aged 2–5</p>
+      <nav class="langs">
+        <a href="#en">English</a>
+        <a href="#ru">Русский</a>
+        <a href="#uk">Українська</a>
+      </nav>
+      <p class="updated">Effective date · Действует с · Чинна з: 07.11.2026</p>
+    </header>
+
+    <section class="card" id="en" lang="en">
+      <h2>Privacy Policy for iPhone and iPad</h2>
+      <p class="lead">Mark's Garage (the "Game") for iPhone and iPad is a game for children aged 2–5. It is built so that it does not collect any data at all.</p>
+      <h3>What data we collect</h3>
+      <p><span class="none">None.</span> The Game does not collect, store on any server or share with anyone any personal or other data, including name, age, e-mail, phone number, device or advertising identifiers, location, contacts, photos, video, microphone audio, usage analytics or crash reports. There is no account and no sign-in.</p>
+      <p>The Game does not connect to the internet: all its pictures, voices and films are inside the app. It asks for no iOS permissions — not for the camera, microphone, photos, location, contacts, notifications or tracking — and it does not track anyone across other apps or websites.</p>
+      <h3>What is stored on the device</h3>
+      <p>Only the game progress (which levels are finished and which rewards were received), the chosen language and whether sound is on. This is kept in the Game's own storage on the iPhone or iPad and is never sent to us. If iCloud Backup or a backup to a computer is turned on, iOS may include this small amount of data in the device backup; such backups are controlled by you and Apple, and we have no access to them.</p>
+      <h3>Keeping and deleting data</h3>
+      <p>We hold no data about you or your child, so there is nothing for us to give access to, correct or delete. Deleting the Game from the iPhone or iPad removes all of its data. If the Game is only offloaded to free up space, iOS keeps its data until the Game is reinstalled or deleted.</p>
+      <h3>Ads and purchases</h3>
+      <p>The Game has no ads. If the Game offers in-app purchases, for example to open more levels, only an adult can reach them, past the parental gate, and they are processed entirely by Apple through the App Store. We never receive your name, e-mail, payment details or Apple Account information: the App Store only tells the Game on the device whether a purchase is active. Purchases, subscriptions and refunds are managed in your Apple Account; how Apple handles this data is described in the <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple Privacy Policy</a>.</p>
+      <h3>Third-party services</h3>
+      <p>The Game contains no third-party SDKs for analytics, advertising, sign-in, crash reporting or data storage, and no third party receives any data from it.</p>
+      <h3>Crash reports from Apple</h3>
+      <p>We do not collect crash reports ourselves. If you have chosen in iOS Settings (Privacy &amp; Security › Analytics &amp; Improvements) to share data with app developers, Apple may pass us anonymous crash and performance statistics for the Game. That choice is yours and can be changed in iOS Settings at any time; we use these statistics only to fix errors.</p>
+      <h3>Children</h3>
+      <p>The Game is made for children and is designed for the Kids category of the App Store (ages 5 and under): it has no ads, no third-party analytics and no links out of the app that a child can reach, and the grown-ups section (language, links, purchases) is behind a parental gate. Because no personal data is collected, no parental consent for data processing is required under children's privacy laws such as COPPA and the GDPR.</p>
+      <h3>Changes</h3>
+      <p>If the Game ever starts to use any data, this policy and the Game's privacy details in the App Store will be updated first.</p>
+      <h3>Contact</h3>
+      <p><a href="mailto:octo.technology.dev@gmail.com">octo.technology.dev@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="ru" lang="ru">
+      <h2>Политика конфиденциальности для iPhone и iPad</h2>
+      <p class="lead">«Гараж Марка» (далее — «Игра») для iPhone и iPad — игра для детей 2–5 лет. Она устроена так, чтобы вообще не собирать данные.</p>
+      <h3>Какие данные мы собираем</h3>
+      <p><span class="none">Никакие.</span> Игра не собирает, не хранит на серверах и никому не передаёт никаких персональных или иных данных: имя, возраст, e-mail, номер телефона, идентификаторы устройства или рекламы, геолокацию, контакты, фото, видео, звук с микрофона, статистику использования и отчёты о сбоях. В Игре нет аккаунта и входа.</p>
+      <p>Игра не выходит в интернет: все её картинки, голоса и фильмы находятся внутри приложения. Она не запрашивает ни одного разрешения iOS — ни к камере, ни к микрофону, ни к фото, ни к геолокации, ни к контактам, ни на уведомления или отслеживание — и никого не отслеживает в других приложениях и на сайтах.</p>
+      <h3>Что хранится на устройстве</h3>
+      <p>Только прогресс игры (пройденные уровни и полученные награды), выбранный язык и настройка звука. Это лежит в собственном хранилище Игры на iPhone или iPad и никогда нам не отправляется. Если включено резервное копирование в iCloud или на компьютер, iOS может добавить эти данные в резервную копию устройства; такими копиями управляете вы и Apple, у нас к ним доступа нет.</p>
+      <h3>Хранение и удаление данных</h3>
+      <p>У нас нет никаких данных о вас или вашем ребёнке, поэтому нам нечего предоставлять, исправлять или удалять. Удаление Игры с iPhone или iPad стирает все её данные. Если Игра только сгружена ради свободного места, iOS сохраняет её данные до переустановки или удаления Игры.</p>
+      <h3>Реклама и покупки</h3>
+      <p>В Игре нет рекламы. Если в Игре есть покупки (например, чтобы открыть больше уровней), до них может добраться только взрослый — через родительскую проверку, а проводит их полностью Apple через App Store. Мы никогда не получаем ваше имя, e-mail, платёжные данные или сведения об Apple Account: App Store лишь сообщает Игре на устройстве, активна ли покупка. Покупками, подписками и возвратами управляют в вашем Apple Account; как Apple обращается с этими данными, описано в <a href="https://www.apple.com/legal/privacy/" rel="noopener">Политике конфиденциальности Apple</a>.</p>
+      <h3>Сторонние сервисы</h3>
+      <p>В Игре нет сторонних SDK для аналитики, рекламы, входа в аккаунт, отчётов о сбоях или хранения данных, и никакие третьи лица не получают из неё данных.</p>
+      <h3>Отчёты о сбоях от Apple</h3>
+      <p>Сами мы отчёты о сбоях не собираем. Если в настройках iOS («Конфиденциальность и безопасность» › «Аналитика и улучшения») вы разрешили делиться данными с разработчиками приложений, Apple может передавать нам обезличенную статистику сбоев и производительности Игры. Это ваш выбор, его можно изменить в настройках iOS в любой момент; мы используем эту статистику только для исправления ошибок.</p>
+      <h3>Дети</h3>
+      <p>Игра создана для детей и рассчитана на категорию «Дети» App Store (5 лет и младше): в ней нет рекламы, сторонней аналитики и доступных ребёнку ссылок из приложения, а раздел для взрослых (язык, ссылки, покупки) закрыт родительской проверкой. Поскольку персональные данные не собираются, согласие родителей на их обработку по законам о защите детских данных, таким как COPPA и GDPR, не требуется.</p>
+      <h3>Изменения</h3>
+      <p>Если Игра когда-нибудь начнёт использовать какие-либо данные, мы заранее обновим эту политику и сведения о конфиденциальности Игры в App Store.</p>
+      <h3>Контакты</h3>
+      <p><a href="mailto:octo.technology.dev@gmail.com">octo.technology.dev@gmail.com</a></p>
+    </section>
+
+    <section class="card" id="uk" lang="uk">
+      <h2>Політика конфіденційності для iPhone та iPad</h2>
+      <p class="lead">«Гараж Марка» (далі — «Гра») для iPhone та iPad — гра для дітей 2–5 років. Вона влаштована так, щоб узагалі не збирати даних.</p>
+      <h3>Які дані ми збираємо</h3>
+      <p><span class="none">Жодних.</span> Гра не збирає, не зберігає на серверах і нікому не передає жодних персональних чи інших даних: ім'я, вік, e-mail, номер телефону, ідентифікатори пристрою чи реклами, геолокацію, контакти, фото, відео, звук із мікрофона, статистику використання та звіти про збої. У Грі немає акаунта та входу.</p>
+      <p>Гра не виходить в інтернет: усі її малюнки, голоси й фільми містяться всередині застосунку. Вона не запитує жодного дозволу iOS — ні до камери, ні до мікрофона, ні до фото, ні до геолокації, ні до контактів, ні на сповіщення чи відстеження — і нікого не відстежує в інших застосунках і на сайтах.</p>
+      <h3>Що зберігається на пристрої</h3>
+      <p>Лише прогрес гри (пройдені рівні та отримані нагороди), обрана мова й налаштування звуку. Це лежить у власному сховищі Гри на iPhone чи iPad і ніколи нам не надсилається. Якщо ввімкнено резервне копіювання в iCloud або на комп'ютер, iOS може додати ці дані до резервної копії пристрою; такими копіями керуєте ви та Apple, ми доступу до них не маємо.</p>
+      <h3>Зберігання й видалення даних</h3>
+      <p>Ми не маємо жодних даних про вас чи вашу дитину, тож нам нічого надавати, виправляти чи видаляти. Видалення Гри з iPhone чи iPad стирає всі її дані. Якщо Гру лише вивантажено, щоб звільнити місце, iOS зберігає її дані до перевстановлення чи видалення Гри.</p>
+      <h3>Реклама й покупки</h3>
+      <p>У Грі немає реклами. Якщо в Грі є покупки (наприклад, щоб відкрити більше рівнів), дістатися до них може лише дорослий — через батьківську перевірку, а проводить їх повністю Apple через App Store. Ми ніколи не отримуємо ваше ім'я, e-mail, платіжні дані чи відомості про Apple Account: App Store лише повідомляє Грі на пристрої, чи активна покупка. Покупками, підписками й поверненням коштів керують у вашому Apple Account; як Apple поводиться з цими даними, описано в <a href="https://www.apple.com/legal/privacy/" rel="noopener">Політиці конфіденційності Apple</a>.</p>
+      <h3>Сторонні сервіси</h3>
+      <p>У Грі немає сторонніх SDK для аналітики, реклами, входу в акаунт, звітів про збої чи зберігання даних, і жодні треті особи не отримують із неї даних.</p>
+      <h3>Звіти про збої від Apple</h3>
+      <p>Самі ми звітів про збої не збираємо. Якщо в налаштуваннях iOS («Приватність і безпека» › «Аналітика та покращення») ви дозволили ділитися даними з розробниками програм, Apple може передавати нам знеособлену статистику збоїв і продуктивності Гри. Це ваш вибір, його можна змінити в налаштуваннях iOS будь-коли; ми використовуємо цю статистику лише для виправлення помилок.</p>
+      <h3>Діти</h3>
+      <p>Гру створено для дітей і розраховано на категорію «Діти» App Store (5 років і молодше): у ній немає реклами, сторонньої аналітики й доступних дитині посилань із застосунку, а розділ для дорослих (мова, посилання, покупки) закрито батьківською перевіркою. Оскільки персональні дані не збираються, згода батьків на їх обробку за законами про захист дитячих даних, як-от COPPA та GDPR, не потрібна.</p>
+      <h3>Зміни</h3>
+      <p>Якщо Гра колись почне використовувати будь-які дані, ми заздалегідь оновимо цю політику й відомості про конфіденційність Гри в App Store.</p>
+      <h3>Контакти</h3>
+      <p><a href="mailto:octo.technology.dev@gmail.com">octo.technology.dev@gmail.com</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>Mark's Garage for iPhone and iPad · <a href="mailto:octo.technology.dev@gmail.com">octo.technology.dev@gmail.com</a></p>
+    <p><a href="privacy.html">Android version of this policy</a></p>
+  </footer>
+</body>
+</html>
